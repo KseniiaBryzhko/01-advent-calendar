@@ -1,0 +1,121 @@
+/* підключення шрифтів з сайту fonts google */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+/* підключення локальних шрифтів */
+@font-face {
+  font-family: "Bebas Neue";
+  src: url(../01/fonts/bebasneue-book-webfont.woff) format("woff"),
+    url(../01/fonts/bebasneue-book-webfont.woff2) format("woff2");
+}
+
+/* налаштування видимої частини вікна браузера */
+body {
+  display: flex;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  max-width: 100vw;
+  min-height: 100vh;
+  padding: 0;
+  background: #2b2a30;
+}
+
+/* налаштування основного контейнера */
+.wrapper {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: 518px;
+  width: 518px;
+  border-radius: 50%;
+  box-shadow: -5px 14px 44px #000000, 5px -16px 50px rgba(255, 255, 255, 0.15);
+}
+
+/* налаштування форми та кольорового кільця в різних станах роботи таймеру */
+.ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  stroke: #09a65a;
+}
+
+.ring.ending {
+  stroke: #9d0000;
+}
+
+/* загальні налаштування таймеру */
+.timer {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 500px;
+  width: 500px;
+  z-index: 2;
+  background: radial-gradient(
+    71.4% 71.4% at 51.7% 28.6%,
+    #3f393f 0%,
+    #17171a 100%
+  );
+  box-shadow: inset 0px 0px 114px rgba(0, 0, 0, 0.45);
+  border-radius: 50%;
+  color: white;
+}
+
+/* налаштування хвилин, двокрапка та секунд */
+.time {
+  display: flex;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  font-family: "Bebas Neue", cursive;
+  font-size: 124px;
+}
+
+input[type="text"] {
+  border: 0;
+  border-bottom: 1px dashed white;
+  background: none;
+  color: white;
+  font-family: "Bebas Neue", cursive;
+  height: 170px;
+  font-size: 124px;
+  width: 150px;
+  text-align: center;
+  outline: none;
+}
+
+input[type="text"]:disabled {
+  border-bottom: none;
+}
+
+/* налаштування елементів керування в різному стані */
+.start {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Montserrat";
+  font-size: 16px;
+  text-transform: uppercase;
+  color: white;
+  opacity: 0.5;
+  margin-bottom: 20px;
+  letter-spacing: 10px;
+}
+
+.start:hover {
+  opacity: 1;
+}
+
+.settings {
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.settings:hover {
+  opacity: 1;
+}
